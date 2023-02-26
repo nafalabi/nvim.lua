@@ -7,7 +7,13 @@ return require('packer').startup(function(use)
     -- CORE
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = {
+            {'nvim-lua/plenary.nvim'},
+            {'kdheepak/lazygit.nvim'},
+        },
+        config = function ()
+            require('telescope').load_extension('lazygit')
+        end
     }
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('nvim-lualine/lualine.nvim') -- Fancy status line
@@ -36,25 +42,31 @@ return require('packer').startup(function(use)
             -- Snippets
             {'L3MON4D3/LuaSnip'},
             {'rafamadriz/friendly-snippets'},
-            -- Useful status updates for LSP
-            {'j-hui/fidget.nvim'},
         }
     }
-    use {'nvim-lua/lsp-status.nvim'}
+    -- cosmetics panel for diagnostics, references, telescope, qickfix and location list
+    use { 'folke/trouble.nvim', requires = 'kyazdani42/nvim-web-devicons' }
 
     -- Additional
     use('mbbill/undotree')
-    use('tpope/vim-fugitive') --git
     use('editorconfig/editorconfig-vim')
     -- init.lua
     use "lukas-reineke/indent-blankline.nvim"
-    use {
-        "folke/trouble.nvim",
-        requires = "kyazdani42/nvim-web-devicons",
-        config = function()
-            require("trouble").setup { }
-        end
-    }
+
+    -- utils
+    use ({
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup() end
+    })
+    use ({
+        "terrortylor/nvim-comment",
+        config = function () require('nvim_comment').setup() end
+    })
+
+    -- git
+    use('tpope/vim-fugitive') --git
+    use { 'lewis6991/gitsigns.nvim' }
+    use('kdheepak/lazygit.nvim')
 
     -- Color Scheme
     use({ 'rose-pine/neovim', as = 'rose-pine' })

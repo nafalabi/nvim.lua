@@ -8,7 +8,7 @@ vim.opt.termguicolors = true
 require("nvim-tree").setup()
 
 map('n', '<A-e>', '<Cmd>NvimTreeFindFile<CR>', opts)
-map('n', '<C-E>', '<Cmd>NvimTreeFindFile<CR>', opts)
+--map('n', '<C-E>', '<Cmd>NvimTreeFindFile<CR>', opts)
 map('n', '<A-b>', '<Cmd>NvimTreeToggle<CR>', opts)
 map('n', '<A-0>', '<Cmd>NvimTreeFocus<CR>', opts)
 

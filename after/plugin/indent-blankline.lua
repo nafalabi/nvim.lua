@@ -1,4 +1,4 @@
-vim.opt.list = true
+vim.opt.list = false
 --vim.opt.listchars:append "eol:↴"
 
 require("indent_blankline").setup {
