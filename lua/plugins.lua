@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
     use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'} -- tab-bar
+    -- use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
     -- LSP
     use {

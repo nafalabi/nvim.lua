@@ -1,6 +1,16 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
+require('bufferline').setup({
+    diagnostics = {
+        [vim.diagnostic.severity.ERROR] = {enabled = true, icon = 'ﬀ'},
+        [vim.diagnostic.severity.WARN] = {enabled = true},
+        [vim.diagnostic.severity.INFO] = {enabled = true},
+        [vim.diagnostic.severity.HINT] = {enabled = true},
+    }
+})
+
+
 -- Move to previous/next
 map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
 map('n', '<C-J>', '<Cmd>BufferPrevious<CR>', opts)
@@ -9,10 +19,15 @@ map('n', '<C-K>', '<Cmd>BufferNext<CR>', opts)
 -- Re-order to previous/next
 map('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
 map('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
--- Pin/unpin buffer
-map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
+-- -- Pin/unpin buffer
+-- map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
 -- Close buffer
 map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
+
+-- Pick buffer
+map('n', '<A-p>', '<Cmd>BufferPick<CR>', opts)
+
+
 -- Wipeout buffer
 --                 :BufferWipeout
 -- Close commands

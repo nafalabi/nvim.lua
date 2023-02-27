@@ -1,0 +1,35 @@
+-- vim.opt.termguicolors = true
+--
+-- require("bufferline").setup({
+--     options = {
+--         diagnostics = "nvim_lsp",
+--         -- diagnostics_indicator = function(count, level, diagnostics_dict, context)
+--         --     local s = " "
+--         --     for e, n in pairs(diagnostics_dict) do
+--         --         local sym = e == "error" and " "
+--         --         or (e == "warning" and " " or "" )
+--         --         s = s .. n .. sym
+--         --     end
+--         --     return s
+--         -- end
+--         diagnostics_indicator = function(count, level, diagnostics_dict, context)
+--             local icon = level:match("error") and " " or " "
+--             return " " .. icon .. count
+--         end
+--     }
+-- })
+--
+-- local map = vim.api.nvim_set_keymap
+-- local opts = { noremap = true, silent = true }
+--
+-- -- Move to previous/next
+-- map('n', '<A-,>', '<Cmd>BufferLineCyclePrev<CR>', opts)
+-- map('n', '<C-J>', '<Cmd>BufferLineCyclePrev<CR>', opts)
+-- map('n', '<A-.>', '<Cmd>BufferLineCycleNext<CR>', opts)
+-- map('n', '<C-K>', '<Cmd>BufferLineCycleNext<CR>', opts)
+-- -- Re-order to previous/next
+-- map('n', '<A-<>', '<Cmd>BufferLineMovePrev<CR>', opts)
+-- map('n', '<A->>', '<Cmd>BufferLineMoveNext<CR>', opts)
+-- -- Close buffer
+-- map('n', '<A-c>', '<Cmd>:bd<CR>', opts)
+--
