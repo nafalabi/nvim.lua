@@ -5,7 +5,11 @@ local opts = { noremap = true, silent = true }
 vim.opt.termguicolors = true
 
 -- empty setup using defaults
-require("nvim-tree").setup()
+require("nvim-tree").setup({
+    renderer = {
+        indent_width = 0,
+    }
+})
 
 map('n', '<A-e>', '<Cmd>NvimTreeFindFile<CR>', opts)
 --map('n', '<C-E>', '<Cmd>NvimTreeFindFile<CR>', opts)
