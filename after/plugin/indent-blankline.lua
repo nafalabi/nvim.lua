@@ -1,6 +1,6 @@
-vim.opt.list = true
-vim.opt.listchars:append "eol:↴"
-vim.opt.listchars:append "space:⋅"
+-- vim.opt.list = true
+-- vim.opt.listchars:append "eol:↴"
+-- vim.opt.listchars:append "space:⋅"
 
 vim.opt.termguicolors = true
 vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
