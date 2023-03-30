@@ -2,11 +2,13 @@ local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 require('bufferline').setup({
-    diagnostics = {
-        [vim.diagnostic.severity.ERROR] = {enabled = true, icon = 'ﬀ'},
-        [vim.diagnostic.severity.WARN] = {enabled = true},
-        [vim.diagnostic.severity.INFO] = {enabled = true},
-        [vim.diagnostic.severity.HINT] = {enabled = true},
+    icon = {
+        diagnostics = {
+            [vim.diagnostic.severity.ERROR] = {enabled = true, icon = 'ﬀ'},
+            [vim.diagnostic.severity.WARN] = {enabled = true},
+            [vim.diagnostic.severity.INFO] = {enabled = true},
+            [vim.diagnostic.severity.HINT] = {enabled = true},
+        }
     }
 })
 

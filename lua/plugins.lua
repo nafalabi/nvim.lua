@@ -59,9 +59,17 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup() end
     })
+    use ({"HiPhish/nvim-ts-rainbow2"})
     use ({
         "terrortylor/nvim-comment",
-        config = function () require('nvim_comment').setup() end
+        requires = 'JoosepAlviste/nvim-ts-context-commentstring',
+        config = function ()
+            require('nvim_comment').setup({
+                hook = function()
+                    require("ts_context_commentstring.internal").update_commentstring()
+                end,
+            })
+        end
     })
 
     -- git
@@ -72,4 +80,6 @@ return require('packer').startup(function(use)
     -- Color Scheme
     use({ 'rose-pine/neovim', as = 'rose-pine' })
     use({ 'navarasu/onedark.nvim' })
+    use({ "ellisonleao/gruvbox.nvim" })
+    use({'Mofiqul/dracula.nvim'})
 end)
