@@ -7,8 +7,11 @@ lsp.preset("recommended")
 lsp.ensure_installed({
   'tsserver',
   'eslint',
+  'tailwindcss',
   'rust_analyzer',
 })
+
+require('lspconfig').tailwindcss.setup({})
 
 -- Fix Undefined global 'vim'
 lsp.configure('lua-languange-server', {
