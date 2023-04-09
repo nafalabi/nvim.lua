@@ -49,6 +49,18 @@ return require('packer').startup(function(use)
     -- cosmetics panel for diagnostics, references, telescope, qickfix and location list
     use { 'folke/trouble.nvim', requires = 'kyazdani42/nvim-web-devicons' }
 
+    -- tailwindcss-colors
+    use {
+        "themaxmarchuk/tailwindcss-colors.nvim",
+        -- load only on require("tailwindcss-colors")
+        module = "tailwindcss-colors",
+        -- run the setup function after plugin is loaded
+        config = function ()
+            -- pass config options here (or nothing to use defaults)
+            require("tailwindcss-colors").setup()
+        end
+    }
+
     -- Additional
     use('mbbill/undotree')
     use('editorconfig/editorconfig-vim')

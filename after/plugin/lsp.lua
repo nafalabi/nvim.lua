@@ -11,8 +11,6 @@ lsp.ensure_installed({
   'rust_analyzer',
 })
 
-require('lspconfig').tailwindcss.setup({})
-
 -- Fix Undefined global 'vim'
 lsp.configure('lua-languange-server', {
     settings = {
@@ -72,5 +70,12 @@ lsp.setup()
 
 vim.diagnostic.config({
     virtual_text = true,
+})
+
+require('lspconfig').tailwindcss.setup({
+    on_attach = function(client, bufnr)
+        -- other stuff --
+        require("tailwindcss-colors").buf_attach(bufnr)
+    end
 })
 
