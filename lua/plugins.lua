@@ -72,7 +72,7 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup() end
     })
-    use ({"HiPhish/nvim-ts-rainbow2"})
+    use ({"mrjones2014/nvim-ts-rainbow"})
     use ({
         "terrortylor/nvim-comment",
         requires = 'JoosepAlviste/nvim-ts-context-commentstring',
