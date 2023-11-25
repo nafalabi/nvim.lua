@@ -1,104 +1,4 @@
--- vim.cmd [[packadd packer.nvim]]
-
--- return require('packer').startup(function(use)
---     -- Packer can manage itself
---     use 'wbthomason/packer.nvim'
---
---     -- CORE
---     use {
---         'nvim-telescope/telescope.nvim', tag = '0.1.0',
---         requires = {
---             {'nvim-lua/plenary.nvim'},
---             {'kdheepak/lazygit.nvim'},
---         },
---         config = function ()
---             require('telescope').load_extension('lazygit')
---         end
---     }
---     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
---     use 'nvim-treesitter/nvim-treesitter-context'
---     use('nvim-lualine/lualine.nvim') -- Fancy status line
---     use {
---         'nvim-tree/nvim-tree.lua',
---         requires = { 'nvim-tree/nvim-web-devicons' }, -- optional, for file icons },
---         tag = 'nightly' -- optional, updated every week. (see issue #1193)
---     }
---     use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'} -- tab-bar
---     -- use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
---
---     -- LSP
---     use {
---         'VonHeikemen/lsp-zero.nvim',
---         requires = {
---             -- LSP Support
---             {'neovim/nvim-lspconfig'},
---             {'williamboman/mason.nvim'},
---             {'williamboman/mason-lspconfig.nvim'},
---             -- Autocompletion
---             {'hrsh7th/nvim-cmp'},
---             {'hrsh7th/cmp-buffer'},
---             {'hrsh7th/cmp-path'},
---             {'saadparwaiz1/cmp_luasnip'},
---             {'hrsh7th/cmp-nvim-lsp'},
---             {'hrsh7th/cmp-nvim-lua'},
---             -- Snippets
---             {'L3MON4D3/LuaSnip'},
---             {'rafamadriz/friendly-snippets'},
---         }
---     }
---     -- cosmetics panel for diagnostics, references, telescope, qickfix and location list
---     use { 'folke/trouble.nvim', requires = 'kyazdani42/nvim-web-devicons' }
---
---     -- tailwindcss-colors
---     use {
---         "themaxmarchuk/tailwindcss-colors.nvim",
---         -- load only on require("tailwindcss-colors")
---         module = "tailwindcss-colors",
---         -- run the setup function after plugin is loaded
---         config = function ()
---             -- pass config options here (or nothing to use defaults)
---             require("tailwindcss-colors").setup()
---         end
---     }
---
---     -- Additional
---     use('mbbill/undotree')
---     use('editorconfig/editorconfig-vim')
---     -- init.lua
---     use "lukas-reineke/indent-blankline.nvim"
---
---     -- utils
---     use ({
---         "windwp/nvim-autopairs",
---         config = function() require("nvim-autopairs").setup() end
---     })
---     use ({"mrjones2014/nvim-ts-rainbow"})
---     use ({
---         "terrortylor/nvim-comment",
---         requires = 'JoosepAlviste/nvim-ts-context-commentstring',
---         config = function ()
---             require('nvim_comment').setup({
---                 hook = function()
---                     require("ts_context_commentstring.internal").update_commentstring()
---                 end,
---             })
---         end
---     })
---
---     -- git
---     use('tpope/vim-fugitive') --git
---     use { 'lewis6991/gitsigns.nvim' }
---     use('kdheepak/lazygit.nvim')
---
---     -- Color Scheme
---     use({ 'rose-pine/neovim', as = 'rose-pine' })
---     use({ 'navarasu/onedark.nvim' })
---     use({ "ellisonleao/gruvbox.nvim" })
---     use({'Mofiqul/dracula.nvim'})
--- end)
-
-
- local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
  if not vim.loop.fs_stat(lazypath) then
    vim.fn.system({
      "git",
@@ -116,7 +16,7 @@ vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappin
 require("lazy").setup({
     -- CORE
     {
-        'nvim-telescope/telescope.nvim', version = '0.1.0',
+        'nvim-telescope/telescope.nvim', version = '0.1.4',
         dependencies = {
             {'nvim-lua/plenary.nvim', commit = '9ac3e9541bbabd9d73663d757e4fe48a675bb054'},
             {'kdheepak/lazygit.nvim', commit = '32bffdebe273e571588f25c8a708ca7297928617'},

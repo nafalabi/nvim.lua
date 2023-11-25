@@ -12,7 +12,7 @@
   "gitsigns.nvim": { "branch": "main", "commit": "372d5cb485f2062ac74abc5b33054abac21d8b58" },
   "gruvbox.nvim": { "branch": "main", "commit": "e685aebb5967c2597858a41779a8d38321253509" },
   "indent-blankline.nvim": { "branch": "master", "commit": "018bd04d80c9a73d399c1061fa0c3b14a7614399" },
-  "lazy.nvim": { "branch": "main", "commit": "16603c6917435d8446f7357cb61095138a417085" },
+  "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
   "lazygit.nvim": { "branch": "main", "commit": "32bffdebe273e571588f25c8a708ca7297928617" },
   "lsp-zero.nvim": { "branch": "v3.x", "commit": "48d5f891b57291550a7e32792abae4d0774942e3" },
   "lualine.nvim": { "branch": "master", "commit": "84ffb80e452d95e2c46fa29a98ea11a240f7843e" },
@@ -32,7 +32,7 @@
   "plenary.nvim": { "branch": "master", "commit": "9ac3e9541bbabd9d73663d757e4fe48a675bb054" },
   "rose-pine": { "branch": "main", "commit": "3935606b6c1cd0111359142498a9b02d3a12e1f1" },
   "tailwindcss-colors.nvim": { "branch": "main", "commit": "ccb5be2f84673c1a0ef90a0c0a76733e85e5265b" },
-  "telescope.nvim": { "branch": "master", "commit": "b79cd6c88b3d96b0f49cb7d240807cd59b610cd8" },
+  "telescope.nvim": { "branch": "master", "commit": "7011eaae0ac1afe036e30c95cf80200b8dc3f21a" },
   "trouble.nvim": { "branch": "main", "commit": "2ae7237c2917d661f458443c9a88680f8ca2d7b2" },
   "undotree": { "branch": "master", "commit": "485f01efde4e22cb1ce547b9e8c9238f36566f21" },
   "vim-fugitive": { "branch": "master", "commit": "ef99f1d90cdb33a52931aed5868785b51fb9411d" }
