@@ -82,7 +82,7 @@ require("lazy").setup({
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup() end
     },
-    {"mrjones2014/nvim-ts-rainbow", commit = '840039440e012ad798ef31349b93a5d4365023ff'},
+    {"HiPhish/nvim-ts-rainbow2", commit = 'b3120cd5ae9ca524af9cb602f41e12e301fa985f'},
     {
         "terrortylor/nvim-comment", commit = 'e9ac16ab056695cad6461173693069ec070d2b23',
         dependencies = {'JoosepAlviste/nvim-ts-context-commentstring', commit = '729d83ecb990dc2b30272833c213cc6d49ed5214'},
