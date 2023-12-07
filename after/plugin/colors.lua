@@ -1,10 +1,14 @@
 require('onedark').setup({
-	style = 'deep'
+	style = 'deep',
+  transparent = true,
 })
 
-DefaultColorScheme = "gruvbox"
--- DefaultColorScheme = "onedark"
--- DefaultColorScheme = "dracula"
+require('gruvbox').setup({
+  transparent_mode = true,
+})
+
+
+DefaultColorScheme = "gruvbox" -- 'rose-pine' | 'onedark' | 'gruvbox' | 'dracula'
 
 function UpdateColorScheme(color) -- available color: rose-pine onedark
 	color = color or DefaultColorScheme
