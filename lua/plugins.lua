@@ -114,6 +114,28 @@ require("lazy").setup({
 			})
 		end,
 	},
+	{
+		"wfxr/minimap.vim",
+		init = function()
+			vim.cmd("let g:minimap_width = 10")
+			vim.cmd("let g:minimap_auto_start = 0")
+			vim.cmd("let g:minimap_auto_start_win_enter = 1")
+
+			-- TODO: this might need some improvement later
+			vim.api.nvim_create_autocmd({ "BufLeave" }, {
+				callback = function(event)
+					if event.event == "BufLeave" then
+						local nvimtree = "NvimTree"
+						if string.match(event.file, nvimtree) == nvimtree then
+							vim.defer_fn(function()
+								vim.cmd("Minimap")
+							end, 500)
+						end
+					end
+				end,
+			})
+		end,
+	},
 
 	-- git
 	{ "tpope/vim-fugitive", commit = "ef99f1d90cdb33a52931aed5868785b51fb9411d" },
