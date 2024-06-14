@@ -98,7 +98,7 @@ require("lazy").setup({
 			require("nvim-autopairs").setup()
 		end,
 	},
-	{ "HiPhish/nvim-ts-rainbow2", commit = "b3120cd5ae9ca524af9cb602f41e12e301fa985f" },
+	-- { "HiPhish/nvim-ts-rainbow2", commit = "b3120cd5ae9ca524af9cb602f41e12e301fa985f" },
 	{
 		"terrortylor/nvim-comment",
 		commit = "e9ac16ab056695cad6461173693069ec070d2b23",
