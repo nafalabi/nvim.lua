@@ -120,6 +120,8 @@ require("lazy").setup({
 			vim.cmd("let g:minimap_width = 10")
 			vim.cmd("let g:minimap_auto_start = 0")
 			vim.cmd("let g:minimap_auto_start_win_enter = 1")
+      vim.cmd("let g:minimap_git_colors	= 1")
+      vim.cmd("let g:minimap_highlight_search = 1")
 
 			-- TODO: this might need some improvement later
 			vim.api.nvim_create_autocmd({ "BufLeave" }, {
