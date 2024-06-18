@@ -170,6 +170,18 @@ require("lazy").setup({
 		end,
 	},
 
+	-- AI Assist
+	{
+		"Exafunction/codeium.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"hrsh7th/nvim-cmp",
+		},
+		config = function()
+			require("codeium").setup({})
+		end,
+	},
+
 	-- git
 	{ "tpope/vim-fugitive", commit = "ef99f1d90cdb33a52931aed5868785b51fb9411d" },
 	{ "lewis6991/gitsigns.nvim", commit = "372d5cb485f2062ac74abc5b33054abac21d8b58" },
