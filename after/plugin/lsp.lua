@@ -43,7 +43,7 @@ lsp.setup_nvim_cmp({
     {name = 'luasnip'},
     {name = 'path'},
     -- {name = 'buffer'},
-    {name = "codeium"},
+    -- {name = "codeium"},
   },
   completion = {
     autocomplete = false,
