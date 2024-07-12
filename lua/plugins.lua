@@ -149,6 +149,12 @@ require("lazy").setup({
 			})
 			codewindow.apply_default_keybinds()
 
+			-- Default Keybindings
+			-- <leader>mo - open the minimap
+			-- <leader>mc - close the minimap
+			-- <leader>mf - focus/unfocus the minimap
+			-- <leader>mm - toggle the minimap
+
 			-- codewindow.setup({
 			--   active_in_terminals = false, -- Should the minimap activate for terminal buffers
 			--   auto_enable = false, -- Automatically open the minimap when entering a (non-excluded) buffer (accepts a table of filetypes)
