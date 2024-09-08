@@ -143,7 +143,7 @@ require("lazy").setup({
 		config = function()
 			local codewindow = require("codewindow")
 			codewindow.setup({
-				auto_enable = true,
+				auto_enable = false,
 				minimap_width = 15,
 				screen_bounds = "background",
 			})
