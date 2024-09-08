@@ -33,3 +33,8 @@ vim.opt.updatetime = 4000
 
 -- vim.opt.colorcolumn = "80"
 
+-- highlighting for jenkins
+vim.cmd([[
+au BufNewFile,BufRead Jenkinsfile setf groovy
+]])
+
