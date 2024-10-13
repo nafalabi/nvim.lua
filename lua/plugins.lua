@@ -38,7 +38,7 @@ require("lazy").setup({
 	{
 		"romgrk/barbar.nvim",
 		commit = "0a21988ddfe4e63ef4d89332b2a6914dbdbf16ac",
-		dependecies = { "nvim-web-devicons", commit = "4ec26d67d419c12a4abaea02f1b6c57b40c08d7e" },
+		dependecies = { "nvim-tree/nvim-web-devicons", commit = "4ec26d67d419c12a4abaea02f1b6c57b40c08d7e" },
 	}, -- tab-bar
 	-- use {'akinsho/bufferline.nvim', tag = "v3.*", dependencies = 'nvim-tree/nvim-web-devicons'}
 
@@ -71,7 +71,7 @@ require("lazy").setup({
 	{
 		"folke/trouble.nvim",
 		commit = "2ae7237c2917d661f458443c9a88680f8ca2d7b2",
-		dependencies = { "kyazdani42/nvim-web-devicons", commit = "4ec26d67d419c12a4abaea02f1b6c57b40c08d7e" },
+		dependencies = { "nvim-tree/nvim-web-devicons", commit = "4ec26d67d419c12a4abaea02f1b6c57b40c08d7e" },
 	},
 	-- tailwindcss-colors
 	{

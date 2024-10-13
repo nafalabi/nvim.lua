@@ -28,6 +28,9 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
+vim.opt.foldmethod = "indent" -- "syntax" | "indent"
+vim.opt.foldlevel=9999
+
 -- vim.opt.updatetime = 50
 vim.opt.updatetime = 4000
 
@@ -37,4 +40,6 @@ vim.opt.updatetime = 4000
 vim.cmd([[
 au BufNewFile,BufRead Jenkinsfile setf groovy
 ]])
+
+vim.cmd("highlight clear Underlined")
 
